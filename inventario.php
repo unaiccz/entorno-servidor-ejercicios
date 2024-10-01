@@ -50,7 +50,7 @@ $costeInicial = 0;
         // parsear
         $cantidadProducto = intval($cantidadProducto);
         if ($producto == "pantalones"){
-            $costeInicial += $pantalones->precio * $cantidadProducto;
+$costeInicial += $pantalones->precio * $cantidadProducto;
             echo "coste por unidad: $pantalones->precio\n";
             $pantalones_cantidad += $cantidadProducto;
         //  ver si es el ultimo producto para mostrar los costes
@@ -60,7 +60,7 @@ $costeInicial = 0;
         } 
         
         elseif ($producto == "camisa"){
-            $costeInicial += $camisa->precio * $cantidadProducto;
+$costeInicial += $camisa->precio * $cantidadProducto;
             echo "coste por unidad: $camisa->precio\n";
             $camisa_cantidad += $cantidadProducto;
         // ver si es el ultimo producto para mostrar los costes
@@ -69,7 +69,7 @@ $costeInicial = 0;
             }
         } 
         elseif ($producto == "zapatillas"){
-            $costeInicial += $zapatillas->precio * $cantidadProducto;
+$costeInicial += $zapatillas->precio * $cantidadProducto;
             echo "coste por unidad: $zapatillas->precio\n";
             $zapatillas_cantidad += $cantidadProducto;
         // ver si es el ultimo producto para mostrar los costes
@@ -80,7 +80,7 @@ $costeInicial = 0;
          
         
         elseif ($producto == "gorra"){
-            $costeInicial += $gorra->precio * $cantidadProducto;
+$costeInicial += $gorra->precio * $cantidadProducto;
             echo "coste por unidad: $gorra->precio\n";
             $gorra_cantidad += $cantidadProducto;
             if ($i == $cantidad - 1){
@@ -94,7 +94,7 @@ $costeInicial = 0;
     }
 } // fin del bucle
 // mostrar los costes
-echo "Resumen de la compra de $nombre\n";
+echo "Resumen de la compra de $nombre: \n";
 if ($pantalones_cantidad > 0){
     echo "Cantidad de pantalones: $pantalones_cantidad: precio:  ". $pantalones_cantidad*$pantalones->precio."\n";
 }
@@ -118,9 +118,7 @@ if ($costeInicial > 100 && $costeInicial< 200){
 } elseif ($costeInicial >= 200){
     $costeInicial = $costeInicial - ($costeInicial *0.15);
     echo "Coste con descuento por superar los 200$ del 15%: $costeInicial\n" ;
-if($cantidad >= 10){
-    $costeInicial = $costeInicial - ($costeInicial * 0.05);
-    echo "Coste con descuento por comprar 10 prod. diferentes del 5%: $costeInicial\n";
+
 }
-}
+echo "Precio final: $costeInicial\n";
 ?>
